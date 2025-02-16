@@ -2,21 +2,21 @@
     "projects": [
       {
         "name": "Typido",
-        "image": "/src/assets/images/typido.png", 
+        "image": "/images/typido.png",
         "description": "Typing improving web app with text generation with AI",
         "year": 2023,
         "demo": "https://typido.vercel.app/"
       },
       {
         "name": "LiveText",
-        "image": "/src/assets/images/lt.png",
+        "image": "/images/lt.png",
         "description": "A live session based chatting app streaming text in real-time",
         "year": 2024,
         "demo": "https://live-text-nine.vercel.app/"
       },
       {
         "name": "Book Exchange",
-        "image": "/src/assets/images/bex.png",
+        "image": "/images/bex.png",
         "description": "A book exchange app, between two parties with real-time communication",
         "year": 2024,
         "demo": "https://book-exchange-two.vercel.app/"
@@ -48,17 +48,17 @@
     {
       "name": "LinkedIn",
       "link": "https://www.linkedin.com/in/ritesh-shukla-475078244/",
-      "icon": "/src/assets/icons/linkedin-logo.svg"
+      "icon": "/icons/linkedin-logo.svg"
     },
     {
       "name": "GitHub",
       "link": "https://github.com/riteshshukladev",
-      "icon": "/src/assets/icons/github-logo.svg"    
+      "icon": "/icons/github-logo.svg"    
     },
     {
       "name": "Twitter",
       "link": "https://x.com/Riteshukla_04",
-      "icon": "/src/assets/icons/x-logo.svg"   
+      "icon": "/icons/x-logo.svg"   
     }
   ]
 }
