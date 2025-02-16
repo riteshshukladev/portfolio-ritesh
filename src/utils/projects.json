@@ -1,0 +1,64 @@
+{
+    "projects": [
+      {
+        "name": "Typido",
+        "image": "/src/assets/images/typido.png", 
+        "description": "Typing improving web app with text generation with AI",
+        "year": 2023,
+        "demo": "https://typido.vercel.app/"
+      },
+      {
+        "name": "LiveText",
+        "image": "/src/assets/images/lt.png",
+        "description": "A live session based chatting app streaming text in real-time",
+        "year": 2024,
+        "demo": "https://live-text-nine.vercel.app/"
+      },
+      {
+        "name": "Book Exchange",
+        "image": "/src/assets/images/bex.png",
+        "description": "A book exchange app, between two parties with real-time communication",
+        "year": 2024,
+        "demo": "https://book-exchange-two.vercel.app/"
+      }
+    ],
+    "Contacts": [
+      {
+        "name": "LinkedIn",
+        "link": "https://www.linkedin.com/in/ritesh-shukla-475078244/",
+        "description": "Let's follow on LinkedIn"
+      },
+      {
+        "name": "GitHub",
+        "link": "https://github.com/riteshshukladev",
+        "description": "View my other work on GitHub"
+      },
+      {
+        "name": "X",
+        "link": "https://x.com/Riteshukla_04",
+        "description": "Talk on X?"
+      },
+      {
+        "name": "Cosmos",
+        "link": "https://www.cosmos.so/prometheus04",
+        "description": "Look at my curated inspirations"
+      }
+    ],
+    "homeContacts": [
+    {
+      "name": "LinkedIn",
+      "link": "https://www.linkedin.com/in/ritesh-shukla-475078244/",
+      "icon": "/src/assets/icons/linkedin-logo.svg"
+    },
+    {
+      "name": "GitHub",
+      "link": "https://github.com/riteshshukladev",
+      "icon": "/src/assets/icons/github-logo.svg"    
+    },
+    {
+      "name": "Twitter",
+      "link": "https://x.com/Riteshukla_04",
+      "icon": "/src/assets/icons/x-logo.svg"   
+    }
+  ]
+}
