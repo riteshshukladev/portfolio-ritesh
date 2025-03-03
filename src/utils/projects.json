@@ -1,12 +1,13 @@
 {
     "projects": [
       {
-        "name": "Typido",
-        "image": "/images/typido.png",
-        "description": "Typing improving web app with text generation with AI",
-        "year": 2023,
-        "demo": "https://typido.vercel.app/"
+        "name": "Book Exchange",
+        "image": "/images/bex.png",
+        "description": "A book exchange app, between two parties with real-time communication",
+        "year": 2024,
+        "demo": "https://book-exchange-two.vercel.app/"
       },
+      
       {
         "name": "LiveText",
         "image": "/images/lt.png",
@@ -14,12 +15,13 @@
         "year": 2024,
         "demo": "https://live-text-nine.vercel.app/"
       },
+      
       {
-        "name": "Book Exchange",
-        "image": "/images/bex.png",
-        "description": "A book exchange app, between two parties with real-time communication",
-        "year": 2024,
-        "demo": "https://book-exchange-two.vercel.app/"
+        "name": "Typido",
+        "image": "/images/typido.png",
+        "description": "Typing improving web app with text generation with AI",
+        "year": 2023,
+        "demo": "https://typido.vercel.app/"
       }
     ],
     "Contacts": [
