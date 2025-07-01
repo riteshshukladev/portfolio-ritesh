@@ -1,6 +1,14 @@
 {
     "projects": [
       {
+        "name": "Finsight",
+        "image": "/images/fs.png",
+        "description": "AI Based Financial tracker and insights app",
+        "year": 2025,
+        "demo": "https://github.com/riteshshukladev/FinSight/releases/tag/v1.01"
+      }
+      ,
+      {
         "name": "Book Exchange",
         "image": "/images/bex.png",
         "description": "A book exchange app, between two parties with real-time communication",
