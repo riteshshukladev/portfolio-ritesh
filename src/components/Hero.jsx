@@ -1,5 +1,4 @@
 import React from "react";
-import { homeContacts } from "../utils/projects.json";
 
 const Hero = () => {
   return (
@@ -17,24 +16,6 @@ const Hero = () => {
           Uses my ability to code products along with AI tools for building
           products faster and better than expected.
         </div>
-      </div>
-
-      <div className="absolute bottom-0 left-0 right-0 py-6 px-6 md:px-10 flex justify-left gap-4">
-        {homeContacts.map((contact, index) => (
-          <a
-            key={index}
-            href={contact.link}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="w-8 h-8 hover:opacity-80 transition-opacity"
-          >
-            <img
-              src={contact.icon}
-              alt={contact.name}
-              className="w-full h-full object-contain"
-            />
-          </a>
-        ))}
       </div>
     </div>
   );
