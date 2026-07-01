@@ -1,0 +1,38 @@
+[
+  {
+    "type": "post",
+    "slug": "go/sample",
+    "filePath": "content/go/sample.md",
+    "title": "Sample Post Title",
+    "date": "2026-07-01",
+    "summary": "This is the opening paragraph of the post. Write whatever you want here.",
+    "category": "go"
+  },
+  {
+    "type": "post",
+    "slug": "maths/sample",
+    "filePath": "content/maths/sample.md",
+    "title": "Sample Post Title",
+    "date": "2026-07-01",
+    "summary": "This is the opening paragraph of the post. Write whatever you want here.",
+    "category": "maths"
+  },
+  {
+    "type": "post",
+    "slug": "projects/sample",
+    "filePath": "content/projects/sample.md",
+    "title": "Sample Post Title",
+    "date": "2026-07-01",
+    "summary": "This is the opening paragraph of the post. Write whatever you want here.",
+    "category": "projects"
+  },
+  {
+    "type": "post",
+    "slug": "teachings/sample",
+    "filePath": "content/teachings/sample.md",
+    "title": "Sample Post Title",
+    "date": "2026-07-01",
+    "summary": "This is the opening paragraph of the post. Write whatever you want here.",
+    "category": "teachings"
+  }
+]
