@@ -30,6 +30,17 @@
       "date": "2026-07-01",
       "summary": "This is the opening paragraph of the post. Write whatever you want here.",
       "category": "projects"
+    },
+    "web-apps": {
+      "demo": {
+        "type": "post",
+        "slug": "projects/web-apps/demo",
+        "filePath": "content/projects/web-apps/demo.md",
+        "title": "Deep Dive into Nested Architectures",
+        "date": "2026-07-01",
+        "summary": "This post is a demonstration of how deeply nested content folders are handled. Because we have multiple folders under `projects/web-apps`, the navigation drawer will smoothly let us drill down into this content natively.",
+        "category": "projects"
+      }
     }
   },
   "teachings": {

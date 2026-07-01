@@ -148,7 +148,7 @@ const PostPage = () => {
       </header>
 
       {/* Markdown Body */}
-      <div className="markdown-body opacity-90 mt-8 md:mt-12">
+      <div className="markdown-body mt-8 md:mt-12">
         {isLoading ? (
           <div className="py-10 text-gray-400 animate-pulse font-medium">
             Loading post...

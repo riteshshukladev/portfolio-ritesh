@@ -28,6 +28,15 @@
   },
   {
     "type": "post",
+    "slug": "projects/web-apps/demo",
+    "filePath": "content/projects/web-apps/demo.md",
+    "title": "Deep Dive into Nested Architectures",
+    "date": "2026-07-01",
+    "summary": "This post is a demonstration of how deeply nested content folders are handled. Because we have multiple folders under `projects/web-apps`, the navigation drawer will smoothly let us drill down into this content natively.",
+    "category": "projects"
+  },
+  {
+    "type": "post",
     "slug": "teachings/sample",
     "filePath": "content/teachings/sample.md",
     "title": "Sample Post Title",
