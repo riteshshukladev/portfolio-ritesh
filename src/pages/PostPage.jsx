@@ -135,7 +135,7 @@ const PostPage = () => {
   return (
     <article className="w-full max-w-4xl mx-auto pt-0 pb-6 px-6 md:px-12 lg:px-16">
       {/* Post Header */}
-      <header className="mb-10 lg:mb-14">
+      <header className="mb-5 lg:mb-7">
         {/* Breadcrumbs */}
         <nav className="flex items-center gap-1.5 md:gap-2 text-[10px] sm:text-[11px] font-semibold text-gray-500 mb-2 uppercase tracking-wider text-[#9A937F]">
           <Link to="/" className="opacity-80 hover:opacity-100 transition-opacity">Home</Link>
@@ -165,7 +165,7 @@ const PostPage = () => {
         <time className="block text-[13px] font-medium text-[#9A937F] mt-1 mb-5 select-none tracking-wide">
           {formatDate(post.date)}
         </time>
-        <hr className="border-t border-[#DFDBCB] mb-8" />
+        <hr className="border-t border-[#DFDBCB] mb-4" />
       </header>
 
       {/* Markdown Body */}
