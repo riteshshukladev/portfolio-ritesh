@@ -184,6 +184,7 @@ const PostPage = ({ onOpenDrawer }) => {
                     style={oneDark}
                     language={match[1]}
                     PreTag="div"
+                    wrapLongLines={true}
                     {...props}
                   >
                     {String(children).replace(/\n$/, '')}
