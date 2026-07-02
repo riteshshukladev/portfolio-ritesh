@@ -1,9 +1,10 @@
----
-title: "Why DynamoDB dropped ACID"
-date: "2026-02-27"
----
+
+
+<!-- # Why DynamoDB dropped ACID -->
 
 ## The core
+
+![](./images/paste_issue.png)
 
 Built a bank transfer system that manually shards data across 3 independent PostgreSQL databases and the app will decide where the data live and how to keep it consistent
 

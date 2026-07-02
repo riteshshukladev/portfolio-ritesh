@@ -6,7 +6,7 @@
       "filePath": "content/go/sample.md",
       "title": "Why DynamoDB dropped ACID",
       "date": "2026-02-27",
-      "summary": "Built a bank transfer system that manually shards data across 3 independent PostgreSQL databases and the app will decide where the data live and how to keep it consistent",
+      "summary": "![](./images/your-image.png)",
       "category": "go"
     }
   },
