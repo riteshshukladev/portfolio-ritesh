@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 
 const Navbar = ({ isOpen, setIsOpen }) => {
   return (
-    <nav className="fixed top-0 left-0 w-full z-[60] px-6 md:px-10 py-3 md:py-5 flex items-center justify-between pointer-events-none">
+    <nav className="fixed top-0 left-0 w-full z-[60] px-6 md:px-10 py-3 md:py-5 flex items-center justify-between pointer-events-none bg-[#F8F6EB]/30 backdrop-blur-[2px] shadow-[0_2px_8px_-4px_rgba(0,0,0,0.05)] md:bg-transparent md:backdrop-blur-none md:shadow-none">
       {/* Hamburger Menu - Left */}
       <button
         id="hamburger-menu"
