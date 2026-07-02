@@ -3,9 +3,7 @@ import React from "react";
 const Hero = () => {
   return (
     <div className="min-h-[calc(100vh-5rem)] flex flex-col md:flex-row items-center justify-center gap-12 md:gap-16 lg:gap-32 px-6 md:px-0 relative">
-      <h1 className="text-7xl md:text-8xl xl:text-[144px] font-bold">
-        Hello <br /> World
-      </h1>
+      <div className="w-64 h-64 md:w-80 md:h-80 rounded-full bg-[#DFDBCB] animate-pulse flex-shrink-0" />
       <div className="w-full md:w-[40%] flex flex-col gap-2 text-base md:text-lg tracking-tight">
         <p>
           <strong>Diary</strong> — because I'll note down the what, how, and why of anything I do, and document it here.
