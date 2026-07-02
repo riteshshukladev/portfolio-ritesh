@@ -39,24 +39,14 @@ function parseFile(absolutePath, relPath) {
     }
   }
 
-  // --- Fallback: extract title from first H1 if not in frontmatter ---
+  // --- H1 always overrides frontmatter title ---
   let h1LineIndex = -1;
-  if (!title) {
-    for (let i = bodyStartIndex; i < lines.length; i++) {
-      const line = lines[i].trim();
-      if (line.startsWith('# ')) {
-        title = line.substring(2).trim();
-        h1LineIndex = i;
-        break;
-      }
-    }
-  } else {
-    // Still find H1 to skip it from body
-    for (let i = bodyStartIndex; i < lines.length; i++) {
-      if (lines[i].trim().startsWith('# ')) {
-        h1LineIndex = i;
-        break;
-      }
+  for (let i = bodyStartIndex; i < lines.length; i++) {
+    const line = lines[i].trim();
+    if (line.startsWith('# ')) {
+      title = line.substring(2).trim();
+      h1LineIndex = i;
+      break;
     }
   }
 

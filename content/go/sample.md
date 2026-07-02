@@ -1,10 +1,12 @@
 
+# Why DynamoDB dropped ACID - dity
 
-<!-- # Why DynamoDB dropped ACID -->
+
+![](./images/paste_issue.png)
+
 
 ## The core
 
-![](./images/paste_issue.png)
 
 Built a bank transfer system that manually shards data across 3 independent PostgreSQL databases and the app will decide where the data live and how to keep it consistent
 

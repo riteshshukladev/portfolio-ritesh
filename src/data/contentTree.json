@@ -4,9 +4,9 @@
       "type": "post",
       "slug": "go/sample",
       "filePath": "content/go/sample.md",
-      "title": "Why DynamoDB dropped ACID",
-      "date": "2026-02-27",
-      "summary": "![](./images/your-image.png)",
+      "title": "Why DynamoDB dropped ACID - dity",
+      "date": "2026-07-02",
+      "summary": "![](./images/paste_issue.png)",
       "category": "go"
     }
   },
@@ -36,7 +36,7 @@
         "type": "post",
         "slug": "projects/web-apps/demo",
         "filePath": "content/projects/web-apps/demo.md",
-        "title": "React Web Architecture Demo",
+        "title": "Deep Dive into Nested Architectures",
         "date": "2026-07-01",
         "summary": "This post is a demonstration of how deeply nested content folders are handled. Because we have multiple folders under `projects/web-apps`, the navigation drawer will smoothly let us drill down into this content natively.",
         "category": "projects"

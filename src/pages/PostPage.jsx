@@ -87,12 +87,18 @@ const PostPage = ({ onOpenDrawer }) => {
             }
           }
         }
-        // Strip the first H1 line if it exists in the body
-        if (lines[bodyStart] && lines[bodyStart].trim().startsWith('# ')) {
-          bodyStart++;
+        // Strip the first H1 line from the body regardless of position
+        let h1Skipped = false;
+        const bodyLines = [];
+        for (let i = bodyStart; i < lines.length; i++) {
+          if (!h1Skipped && lines[i].trim().startsWith('# ')) {
+            h1Skipped = true;
+            continue;
+          }
+          bodyLines.push(lines[i]);
         }
 
-        const rawBody = lines.slice(bodyStart).join('\n');
+        const rawBody = bodyLines.join('\n');
 
         // Rewrite image paths to public URLs
         const slugDir = slug.split('/').slice(0, -1).join('/');
