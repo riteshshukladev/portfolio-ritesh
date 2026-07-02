@@ -16,48 +16,78 @@ function parseFile(absolutePath, relPath) {
   const lines = content.split('\n');
   let title = '';
   let summary = '';
-  let h1Found = false;
-  let h1LineIndex = -1;
+  let date = '';
+  let bodyStartIndex = 0;
 
-  for (let i = 0; i < lines.length; i++) {
-    const line = lines[i].trim();
-    if (line.startsWith('# ')) {
-      title = line.substring(2).trim();
-      h1Found = true;
-      h1LineIndex = i;
-      break;
+  // --- Parse frontmatter (between --- delimiters) ---
+  let hasFrontmatter = false;
+  if (lines[0] && lines[0].trim() === '---') {
+    for (let i = 1; i < lines.length; i++) {
+      if (lines[i].trim() === '---') {
+        hasFrontmatter = true;
+        bodyStartIndex = i + 1;
+        break;
+      }
+      // Parse key: value pairs
+      const match = lines[i].match(/^(\w+)\s*:\s*"?([^"]*)"?\s*$/);
+      if (match) {
+        const key = match[1].toLowerCase();
+        const val = match[2].trim();
+        if (key === 'title') title = val;
+        if (key === 'date') date = val;
+      }
     }
   }
 
-  if (!h1Found) {
-    console.warn(`Warning: No H1 found in ${absolutePath}`);
+  // --- Fallback: extract title from first H1 if not in frontmatter ---
+  let h1LineIndex = -1;
+  if (!title) {
+    for (let i = bodyStartIndex; i < lines.length; i++) {
+      const line = lines[i].trim();
+      if (line.startsWith('# ')) {
+        title = line.substring(2).trim();
+        h1LineIndex = i;
+        break;
+      }
+    }
+  } else {
+    // Still find H1 to skip it from body
+    for (let i = bodyStartIndex; i < lines.length; i++) {
+      if (lines[i].trim().startsWith('# ')) {
+        h1LineIndex = i;
+        break;
+      }
+    }
+  }
+
+  if (!title) {
+    console.warn(`Warning: No title found in ${absolutePath}`);
     const basename = path.basename(absolutePath, '.md');
-    // Replace dashes and underscores with spaces
     title = basename.replace(/[-_]/g, ' ');
   }
 
-  // Find summary: first non-empty paragraph of body text after H1
-  // A non-empty paragraph is text not starting with '#' and not empty
-  const startIdx = h1Found ? h1LineIndex + 1 : 0;
-  for (let i = startIdx; i < lines.length; i++) {
+  // Find summary: first non-empty paragraph of body text after frontmatter/H1
+  const summaryStart = h1LineIndex >= 0 ? h1LineIndex + 1 : bodyStartIndex;
+  for (let i = summaryStart; i < lines.length; i++) {
     const line = lines[i].trim();
-    if (line !== '' && !line.startsWith('#')) {
+    if (line !== '' && !line.startsWith('#') && !line.startsWith('```')) {
       summary = line;
       break;
     }
   }
 
   // Derive fields
-  // Handle cross-platform path separators
   const normalizedRelPath = relPath.split(path.sep).join('/');
   const pathParts = normalizedRelPath.split('/');
   const category = pathParts[0];
   const slug = normalizedRelPath.slice(0, -3); // remove .md
   const filePath = `content/${slug}.md`;
   
-  const stats = fs.statSync(absolutePath);
-  // Format date as YYYY-MM-DD
-  const date = stats.mtime.toISOString().split('T')[0];
+  // Fallback date to file mtime if not in frontmatter
+  if (!date) {
+    const stats = fs.statSync(absolutePath);
+    date = stats.mtime.toISOString().split('T')[0];
+  }
 
   const post = {
     type: 'post',

@@ -9,10 +9,9 @@
 
 
 .bg-rough {
-  background-color: #f0f1ed;
+  background-color: #F8F6EB;
   background-image: 
-    /* Lower the overlay opacity for less intense particles */
-    linear-gradient(rgba(0, 0, 0, 0.01), rgba(0, 0, 0, 0.01)),
+    linear-gradient(rgba(0, 0, 0, 0.0), rgba(0, 0, 0, 0.0)),
     url('https://www.transparenttextures.com/patterns/asfalt-dark.png');
   background-size: 200px 200px;
   background-blend-mode: multiply;

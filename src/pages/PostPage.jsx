@@ -54,7 +54,7 @@ const PostPage = () => {
   // Load markdown content dynamically
   useEffect(() => {
     let isMounted = true;
-    
+
     if (!post) {
       setIsLoading(false);
       return;
@@ -69,21 +69,31 @@ const PostPage = () => {
     if (loader) {
       loader().then(raw => {
         if (!isMounted) return;
-        
+
         let contentToSet = raw;
         // The Vite 5 `?raw` loader often returns string directly but just in case it's an object with default
         if (typeof raw === 'object' && raw.default) {
-           contentToSet = raw.default;
+          contentToSet = raw.default;
         }
 
-        // Strip the first H1 line if it exists
+        // Strip frontmatter (--- delimited block) if present
         const lines = contentToSet.split('\n');
-        if (lines[0] && lines[0].startsWith('# ')) {
-          lines.shift();
+        let bodyStart = 0;
+        if (lines[0] && lines[0].trim() === '---') {
+          for (let i = 1; i < lines.length; i++) {
+            if (lines[i].trim() === '---') {
+              bodyStart = i + 1;
+              break;
+            }
+          }
         }
-        
-        const rawWithoutH1 = lines.join('\n');
-        
+        // Strip the first H1 line if it exists in the body
+        if (lines[bodyStart] && lines[bodyStart].trim().startsWith('# ')) {
+          bodyStart++;
+        }
+
+        const rawBody = lines.slice(bodyStart).join('\n');
+
         // Rewrite image paths to public URLs
         const slugDir = slug.split('/').slice(0, -1).join('/');
         function rewriteImagePaths(markdown, dir) {
@@ -92,9 +102,9 @@ const PostPage = () => {
             (_, alt, filename) => `![${alt}](/content/${dir}/images/${filename})`
           );
         }
-        
-        const rewritten = rewriteImagePaths(rawWithoutH1, slugDir);
-        
+
+        const rewritten = rewriteImagePaths(rawBody, slugDir);
+
         setMarkdownContent(rewritten);
         setIsLoading(false);
       }).catch(err => {
@@ -123,26 +133,49 @@ const PostPage = () => {
   }
 
   return (
-    <article className="max-w-3xl mx-auto pt-24 md:pt-32 pb-16 px-6 md:px-12 w-full">
+    <article className="w-full max-w-4xl mx-auto pt-0 pb-6 px-6 md:px-12 lg:px-16">
       {/* Post Header */}
       <header className="mb-10 lg:mb-14">
-        <h1 className="text-4xl md:text-5xl font-bold tracking-tight mb-5 text-black">
+        {/* Breadcrumbs */}
+        <nav className="flex items-center gap-1.5 md:gap-2 text-[10px] sm:text-[11px] font-semibold text-gray-500 mb-2 uppercase tracking-wider text-[#9A937F]">
+          <Link to="/" className="opacity-80 hover:opacity-100 transition-opacity">Home</Link>
+          {slug && slug.split('/').map((crumb, idx, arr) => {
+            const pathSoFar = arr.slice(0, idx + 1).join('/');
+            return (
+              <React.Fragment key={idx}>
+                <span className="opacity-50">›</span>
+                {idx === arr.length - 1 ? (
+                  <span className="opacity-100 text-[#C16B4A]">
+                    {crumb.replace(/-/g, ' ')}
+                  </span>
+                ) : (
+                  <Link to={`/post/${pathSoFar}`} className="opacity-80 hover:opacity-100 transition-opacity">
+                    {crumb.replace(/-/g, ' ')}
+                  </Link>
+                )}
+              </React.Fragment>
+            );
+          })}
+        </nav>
+
+        <h1 className="text-3xl md:text-[36px] font-medium tracking-tight mb-0 zilla-text text-[#2B3B2D]">
           {post.title}
         </h1>
-        
-        <time className="block text-[15px] font-medium text-gray-500 mb-8 select-none">
+
+        <time className="block text-[13px] font-medium text-[#9A937F] mt-1 mb-5 select-none tracking-wide">
           {formatDate(post.date)}
         </time>
+        <hr className="border-t border-[#DFDBCB] mb-8" />
       </header>
 
       {/* Markdown Body */}
-      <div className="markdown-body mt-8 md:mt-12">
+      <div className="markdown-body">
         {isLoading ? (
           <div className="py-10 text-gray-400 animate-pulse font-medium">
             Loading post...
           </div>
         ) : (
-          <ReactMarkdown 
+          <ReactMarkdown
             components={{
               code({ node, inline, className, children, ...props }) {
                 const match = /language-(\w+)/.exec(className || '');

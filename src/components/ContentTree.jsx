@@ -18,8 +18,9 @@ const TreeNode = ({ node, name, depth, closeDrawer }) => {
         <Link
           to={postPath}
           onClick={closeDrawer}
-          className={`flex items-center gap-2 transition-colors font-medium ${isActive ? 'text-black font-bold' : 'text-black opacity-80 hover:opacity-100'
-            }`}
+          className={`flex items-center gap-2 px-3 py-1.5 -ml-3 rounded-md transition-colors font-medium ${
+            isActive ? 'bg-[#E3DFCA] text-[#2B3B2D] font-semibold' : 'text-black opacity-70 hover:opacity-100 hover:bg-[#E5E1CA]/50'
+          }`}
         >
           <span className="text-[12px] opacity-70 mt-[2px]">·</span>
           <span className="truncate">{node.title || name}</span>
@@ -77,16 +78,15 @@ const ContentTree = ({ isOpen, setIsOpen }) => {
         />
       )}
 
-      {/* Sidebar Drawer Container */}
       <aside
-        className={`fixed top-0 left-0 h-screen w-64 md:w-72 bg-white/95 backdrop-blur z-50 pt-16 pb-10 px-5 md:px-8 border-r border-gray-100 overflow-y-auto transition-transform duration-300 ease-[cubic-bezier(0.76,0,0.24,1)] 
+        className={`fixed top-0 left-0 h-screen w-64 md:w-72 bg-[#F1EEDB] z-50 pt-16 pb-10 px-5 md:px-8 border-r border-[#E0DCCA]/60 overflow-y-auto transition-transform duration-300 ease-[cubic-bezier(0.76,0,0.24,1)] 
           ${isOpen ? 'translate-x-0 shadow-2xl' : '-translate-x-full'}`}
       >
 
 
         {/* Content Designator */}
-        <div className="mb-2 pl-1">
-          <span className="text-[14px] capitalize tracking-wide font-semibold text-gray-800">content</span>
+        <div className="mb-3 pl-1">
+          <span className="text-[11px] uppercase tracking-widest font-semibold text-[#A09C8B]">content</span>
         </div>
 
         <nav className="flex flex-col gap-0.5 text-[14px] tracking-[-0.05em] leading-relaxed">
