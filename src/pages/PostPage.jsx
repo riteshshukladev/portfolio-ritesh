@@ -23,7 +23,7 @@ function formatDate(dateStr) {
   return `${day} ${month} ${year}`;
 }
 
-const PostPage = () => {
+const PostPage = ({ onOpenDrawer }) => {
   const { '*': slug } = useParams();
   const [markdownContent, setMarkdownContent] = useState('');
   const [isLoading, setIsLoading] = useState(true);
@@ -135,9 +135,9 @@ const PostPage = () => {
   return (
     <article className="w-full max-w-4xl mx-auto pt-0 pb-6 px-6 md:px-12 lg:px-16">
       {/* Post Header */}
-      <header className="mb-5 lg:mb-7">
+      <header>
         {/* Breadcrumbs */}
-        <nav className="flex items-center gap-1.5 md:gap-2 text-[10px] sm:text-[11px] font-semibold text-gray-500 mb-2 uppercase tracking-wider text-[#9A937F]">
+        <nav className="flex items-center gap-1.5 md:gap-2 text-[12px] font-semibold text-gray-500 mb-2 lowercase tracking-wider text-[#9A937F]">
           <Link to="/" className="opacity-80 hover:opacity-100 transition-opacity">Home</Link>
           {slug && slug.split('/').map((crumb, idx, arr) => {
             const pathSoFar = arr.slice(0, idx + 1).join('/');
@@ -149,9 +149,9 @@ const PostPage = () => {
                     {crumb.replace(/-/g, ' ')}
                   </span>
                 ) : (
-                  <Link to={`/post/${pathSoFar}`} className="opacity-80 hover:opacity-100 transition-opacity">
+                  <button onClick={onOpenDrawer} className="opacity-80 hover:opacity-100 transition-opacity cursor-pointer bg-transparent border-none p-0 font-semibold text-[#9A937F]">
                     {crumb.replace(/-/g, ' ')}
-                  </Link>
+                  </button>
                 )}
               </React.Fragment>
             );

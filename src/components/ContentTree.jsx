@@ -6,7 +6,6 @@ const TreeNode = ({ node, name, depth, closeDrawer }) => {
   const isPost = node.type === 'post';
   const location = useLocation();
 
-  // Folders start closed by default
   const [isOpen, setIsOpen] = useState(false);
 
   if (isPost) {
@@ -29,7 +28,6 @@ const TreeNode = ({ node, name, depth, closeDrawer }) => {
     );
   }
 
-  // It's a folder
   return (
     <div>
       <div

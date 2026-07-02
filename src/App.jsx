@@ -8,6 +8,7 @@ import PostPage from "./pages/PostPage";
 
 function App() {
   const [isDrawerOpen, setIsDrawerOpen] = useState(false);
+
   return (
     <div className="relative">
       <Navbar isOpen={isDrawerOpen} setIsOpen={setIsDrawerOpen} />
@@ -17,7 +18,7 @@ function App() {
       <main className="min-h-screen pt-20">
         <Routes>
           <Route path="/" element={<Hero />} />
-          <Route path="/post/*" element={<PostPage />} />
+          <Route path="/post/*" element={<PostPage onOpenDrawer={() => setIsDrawerOpen(true)} />} />
         </Routes>
       </main>
     </div>
