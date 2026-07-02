@@ -57,13 +57,19 @@
   font-size: 0.9rem;
 }
 
-/* Blockquotes — used for notes/callouts */
+/* Blockquotes — used for notes, warnings, and callouts */
 .markdown-body blockquote {
-  border-left: 3px solid var(--accent);
-  margin: 1.5rem 0;
-  padding: 0.5rem 0 0.5rem 1.25rem;
-  color: var(--text-muted);
-  font-style: italic;
+  border-left: 4px solid var(--accent);
+  background: #f8fafc;
+  margin: 2rem 0;
+  padding: 1.25rem 1.5rem;
+  color: #334155;
+  font-style: normal;
+  border-radius: 0 8px 8px 0;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+}
+.markdown-body blockquote p:last-child {
+  margin-bottom: 0;
 }
 
 /* Lists */
@@ -90,8 +96,10 @@
 .markdown-body img {
   max-width: 100%;
   display: block;
-  margin: 1.5rem auto;
-  border-radius: 6px;
+  margin: 2.5rem auto;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08); /* elegant premium shadow */
+  border: 1px solid #f1f5f9;
 }
 
 /* Horizontal rule */

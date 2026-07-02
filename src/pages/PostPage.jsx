@@ -126,12 +126,6 @@ const PostPage = () => {
     <article className="max-w-3xl mx-auto pt-24 md:pt-32 pb-16 px-6 md:px-12 w-full">
       {/* Post Header */}
       <header className="mb-10 lg:mb-14">
-        <div className="mb-6">
-          <span className="inline-block px-3 py-1 text-xs font-medium bg-gray-100/80 text-gray-700 rounded-full capitalize tracking-wide select-none">
-            {post.category}
-          </span>
-        </div>
-        
         <h1 className="text-4xl md:text-5xl font-bold tracking-tight mb-5 text-black">
           {post.title}
         </h1>
@@ -139,12 +133,6 @@ const PostPage = () => {
         <time className="block text-[15px] font-medium text-gray-500 mb-8 select-none">
           {formatDate(post.date)}
         </time>
-
-        {post.summary && (
-          <p className="text-lg md:text-xl text-gray-600 leading-relaxed font-light mt-4">
-            {post.summary}
-          </p>
-        )}
       </header>
 
       {/* Markdown Body */}
