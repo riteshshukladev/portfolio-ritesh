@@ -64,3 +64,21 @@ func (s *Store) TransferSameShard(ctx context.Context, from, to int64, amount in
 ```
 
 > **Note:** This is the happy path. One database, one transaction, full ACID guarantees. PostgreSQL handles rollback on failure automatically.
+
+## Math test
+
+Inline: $E = mc^2$
+
+Block:
+
+$$
+\int_{-\infty}^{\infty} e^{-x^2} dx = \sqrt{\pi}
+$$
+
+Sharding probability:
+
+$$
+P(\text{same shard}) = \frac{1}{N}
+$$
+
+With $N = 3$, cross-shard probability is $1 - \frac{1}{3} = \frac{2}{3} \approx 67\%$.
