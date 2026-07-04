@@ -11,21 +11,21 @@ const Hero = () => {
         <p>
           Hi, this is Ritesh. Here I'll share with the world my learnings and whatever I'm into. You can expect:
         </p>
-        <ul className="list-disc pl-5 flex flex-col gap-0 text-[14px] md:text-[16px] opacity-[0.85]">
+        <ul className="list-disc pl-5 flex flex-col gap-0 text-base text-[#56544D] tracking-[0.01em]">
           <li>Projects that I've built</li>
           <li>Backend-related stuff — specifically Go, systems, and projects</li>
           <li>Math</li>
           <li>Teachings from the Upanishads and the Gita</li>
         </ul>
         
-        <div className="text-[14px] md:text-[16px] mt-2">
+        <div className="mt-2">
           <p className="mb-2">Here are my socials — if anything's on your mind, please let me know.</p>
-          <div className="flex gap-6">
+          <div className="flex flex-wrap gap-x-6 gap-y-1">
             <a
               href="https://github.com/riteshshukladev"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-[14px] md:text-[16px] opacity-[0.85]"
+              className="opacity-[0.85]"
               style={{ textDecoration: "underline", textDecorationThickness: "0.5px" }}
             >
               Github
@@ -34,7 +34,7 @@ const Hero = () => {
               href="https://www.linkedin.com/in/ritesh-shukla-475078244/"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-[14px] md:text-[16px] opacity-[0.85]"
+              className="opacity-[0.85]"
               style={{ textDecoration: "underline", textDecorationThickness: "0.5px" }}
             >
               LinkedIn
@@ -43,7 +43,7 @@ const Hero = () => {
               href="https://x.com/Riteshukla_04"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-[14px] md:text-[16px] opacity-[0.85]"
+              className="opacity-[0.85]"
               style={{ textDecoration: "underline", textDecorationThickness: "0.5px" }}
             >
               X

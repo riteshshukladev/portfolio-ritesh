@@ -36,7 +36,7 @@ const Navbar = ({ isOpen, setIsOpen }) => {
         to="/"
         className="pointer-events-auto zilla-text text-black/80 hover:text-black transition-colors duration-300 text-[16px] md:text-[18px] select-none"
         style={{
-          fontWeight: 400,
+          fontWeight: 500,
         }}
       >
         ritesh's diary
