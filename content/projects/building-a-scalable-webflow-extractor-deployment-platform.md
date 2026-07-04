@@ -123,12 +123,4 @@ Heavy Playwright scraping instances can consume significant RAM. If the exporter
 sudo dmesg -T | grep -i kill
 ```
 
-## About Me
-
-Hey, I'm Ritesh Shukla. I'm 21 years old and I spend my time building cool, sophisticated software—mostly leveraging AI to move faster and build better.
-
-I love diving into projects that get incredibly complex in terms of backend depth and infrastructure, but I always keep an eye on good frontend design, too. I'm currently diving deep into system design and constantly experimenting with new ways to structure and build apps.
-
-If you want to chat about tech, share ideas, or just connect, feel free to reach out.
-
-**Email:** [riteshuklaa@gmail.com](mailto:riteshuklaa@gmail.com)
+Hey, if you feel you can add to my learnings with your insights, or if you generally feel that something could be done better here, please let me know at [riteshuklaa@gmail.com](mailto:riteshuklaa@gmail.com).
