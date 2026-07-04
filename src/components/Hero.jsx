@@ -11,7 +11,7 @@ const Hero = () => {
         <p>
           Hi, this is Ritesh. Here I'll share with the world my learnings and whatever I'm into. You can expect:
         </p>
-        <ul className="list-disc pl-5 flex flex-col gap-0 text-base text-[#56544D] tracking-[0.01em]">
+        <ul className="list-disc pl-5 flex flex-col gap-0 text-[15px] md:text-base text-[#56544D] tracking-[0.01em]">
           <li>Projects that I've built</li>
           <li>Backend-related stuff — specifically Go, systems, and projects</li>
           <li>Math</li>
@@ -25,8 +25,8 @@ const Hero = () => {
               href="https://github.com/riteshshukladev"
               target="_blank"
               rel="noopener noreferrer"
-              className="opacity-[0.85]"
-              style={{ textDecoration: "underline", textDecorationThickness: "0.5px" }}
+              className="opacity-[0.85] underline underline-offset-2"
+              style={{ textDecorationThickness: "0.5px" }}
             >
               Github
             </a>
@@ -34,8 +34,8 @@ const Hero = () => {
               href="https://www.linkedin.com/in/ritesh-shukla-475078244/"
               target="_blank"
               rel="noopener noreferrer"
-              className="opacity-[0.85]"
-              style={{ textDecoration: "underline", textDecorationThickness: "0.5px" }}
+              className="opacity-[0.85] underline underline-offset-2"
+              style={{ textDecorationThickness: "0.5px" }}
             >
               LinkedIn
             </a>
@@ -43,8 +43,8 @@ const Hero = () => {
               href="https://x.com/Riteshukla_04"
               target="_blank"
               rel="noopener noreferrer"
-              className="opacity-[0.85]"
-              style={{ textDecoration: "underline", textDecorationThickness: "0.5px" }}
+              className="opacity-[0.85] underline underline-offset-2"
+              style={{ textDecorationThickness: "0.5px" }}
             >
               X
             </a>
