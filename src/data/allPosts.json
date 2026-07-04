@@ -4,35 +4,8 @@
     "slug": "projects/building-a-scalable-webflow-extractor-deployment-platform",
     "filePath": "content/projects/building-a-scalable-webflow-extractor-deployment-platform.md",
     "title": "Building a Scalable Webflow Extractor & Deployment Platform",
-    "date": "2026-07-03",
+    "date": "2026-07-04",
     "summary": "An architectural deep dive into decoupling No-Code frontends, overcoming hard network timeouts, and automating remote server deployments across a custom Linux microservice cluster.",
     "category": "projects"
-  },
-  {
-    "type": "post",
-    "slug": "go/sample",
-    "filePath": "content/go/sample.md",
-    "title": "Why DynamoDB dropped ACID - dity",
-    "date": "2026-07-02",
-    "summary": "![](./images/paste_issue.png)",
-    "category": "go"
-  },
-  {
-    "type": "post",
-    "slug": "maths/sample",
-    "filePath": "content/maths/sample.md",
-    "title": "Sample Post Title",
-    "date": "2026-07-01",
-    "summary": "This is the opening paragraph of the post. Write whatever you want here.",
-    "category": "maths"
-  },
-  {
-    "type": "post",
-    "slug": "teachings/sample",
-    "filePath": "content/teachings/sample.md",
-    "title": "Sample Post Title",
-    "date": "2026-07-01",
-    "summary": "This is the opening paragraph of the post. Write whatever you want here.",
-    "category": "teachings"
   }
 ]
