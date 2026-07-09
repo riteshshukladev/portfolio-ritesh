@@ -1,9 +1,14 @@
 import React from "react";
+import profileImg from "../assets/1783588402115.jpg";
 
 const Hero = () => {
   return (
     <div className="min-h-[calc(100vh-5rem)] flex flex-col md:flex-row items-center justify-center gap-12 md:gap-16 lg:gap-32 px-6 md:px-0 relative">
-      <div className="w-64 h-64 md:w-80 md:h-80 rounded-full bg-[#DFDBCB] animate-pulse flex-shrink-0" />
+      <img
+        src={profileImg}
+        alt="Ritesh"
+        className="w-64 h-64 md:w-80 md:h-80 rounded-full object-cover flex-shrink-0"
+      />
       <div className="w-full md:w-[40%] flex flex-col gap-2 text-base md:text-lg tracking-tight">
         <p>
           <strong>Diary</strong> — because I'll note down the what, how, and why of anything I do, and document it here.
