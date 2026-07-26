@@ -114,12 +114,5 @@ If `Tags` is `nil`, then with `omitempty`, the field is omitted entirely from th
 
 This lets you express "the client never sent tags" versus "the client explicitly sent an empty tags object," which can matter for things like PATCH requests where you need to know if a field was touched at all.
 
-## 6. Quick Reference
-
-| Declaration | Is it nil? | Read? | Write? |
-|---|---|---|---|
-| `var m map[string]int` | Yes | Yes | No — panics |
-| `m := make(map[string]int)` | No (empty) | Yes | Yes |
-| `m := map[string]int{"abc": 1}` | No (has data) | Yes | Yes |
 
 > **💬 Have feedback?** If you feel you can add to my learnings with your insights, or if you generally feel that something could be done better here, please let me know at [riteshuklaa@gmail.com](mailto:riteshuklaa@gmail.com).
